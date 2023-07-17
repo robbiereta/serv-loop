@@ -4,12 +4,12 @@ import {juggler} from '@loopback/repository';
 const config = {
   name: 'mdb',
   connector: 'mongodb',
-  url: 'mongodb+srv://Robbie:HhpO3zvURq6Rnzuy@cluster0.c9uqb.mongodb.net/',
+  url: 'mongodb+srv://Robbie:HhpO3zvURq6Rnzuy@cluster0.c9uqb.mongodb.net/roaly',
   host: 'localhost',
   port: 3000,
-  user: 'Robbie',
-  password: 'HhpO3zvURq6Rnzuy',
-  database: 'testdb',
+  user: '',
+  password: '',
+  database: 'roaly',
   useNewUrlParser: true
 };
 
