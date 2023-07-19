@@ -21,11 +21,41 @@ export class Cot extends Entity {
   })
   anio: number;
 
+  @property({
+    type: 'string',
+    required: true,
+  })
+  moto: string;
+
+  @property({
+    type: 'string',
+    required: true,
+  })
+  producto: string;
+
+  @property({
+    type: 'number',
+    required: true,
+  })
+  telefono: number;
+
+  @property({
+    type: 'string',
+    required: true,
+  })
+  color: string;
+
+  @property({
+    type: 'number',
+  })
+  ordenCompraId?: number;
 
   constructor(data?: Partial<Cot>) {
     super(data);
   }
 }
+
+
 
 export interface CotRelations {
   // describe navigational properties here
