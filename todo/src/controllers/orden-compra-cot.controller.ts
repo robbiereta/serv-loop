@@ -39,7 +39,7 @@ export class OrdenCompraCotController {
     },
   })
   async find(
-    @param.path.number('id') id: number,
+    @param.path.number('id') id: string,
     @param.query.object('filter') filter?: Filter<Cot>,
   ): Promise<Cot[]> {
     return this.ordenCompraRepository.cots(id).find(filter);
@@ -79,7 +79,7 @@ export class OrdenCompraCotController {
     },
   })
   async patch(
-    @param.path.number('id') id: number,
+    @param.path.number('id') id: string,
     @requestBody({
       content: {
         'application/json': {
@@ -102,7 +102,7 @@ export class OrdenCompraCotController {
     },
   })
   async delete(
-    @param.path.number('id') id: number,
+    @param.path.number('id') id: string,
     @param.query.object('where', getWhereSchemaFor(Cot)) where?: Where<Cot>,
   ): Promise<Count> {
     return this.ordenCompraRepository.cots(id).delete(where);
