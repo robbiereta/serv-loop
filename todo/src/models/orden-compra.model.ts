@@ -4,12 +4,12 @@ import {Cot,CotWithRelations} from './cot.model';
 @model()
 export class OrdenCompra extends Entity {
   @property({
-    type: 'number',
+    type: 'string',
     id: true,
     generated: true,
     required: true,
   })
-  id: number;
+  id: string;
 
   @hasMany(() => Cot)
   cots: Cot[];

@@ -3,12 +3,12 @@ import {Entity, model, property} from '@loopback/repository';
 @model()
 export class Cot extends Entity {
   @property({
-    type: 'number',
+    type: 'string',
     id: true,
     generated: true,
   })
-  id?: number;
-
+  id?: string;
+  
   @property({
     type: 'string',
     required: true,
@@ -46,9 +46,10 @@ export class Cot extends Entity {
   color: string;
 
   @property({
-    type: 'number',
+    type: 'string',
+    generated: true,
   })
-  ordenCompraId?: number;
+  ordenCompraId?: string;
 
   constructor(data?: Partial<Cot>) {
     super(data);
