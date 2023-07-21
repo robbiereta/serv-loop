@@ -11,6 +11,14 @@ export class OrdenCompra extends Entity {
   })
   id: string;
 
+  @property({
+    type: 'string',
+    required: true,
+  })
+  numTicket: string;
+
+
+
   @hasMany(() => Cot)
   cots: Cot[];
 
