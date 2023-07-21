@@ -6,7 +6,7 @@ export class OrdenCompra extends Entity {
   @property({
     type: 'number',
     id: true,
-    generated: false,
+    generated: true,
     required: true,
   })
   id: number;
